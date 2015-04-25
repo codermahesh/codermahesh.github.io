@@ -5,10 +5,13 @@ title: IO Streams Back To School
 
  Just a Helping note on IOStream because ppl are too lazy to learn, write and share (for free!, you codeholes). 
  <br/>
-So annoyed by people whining about performance degradation over issues from compiler,bandwidth,CPU,network latency etc.
-while simply overlooking programming mistakes from their programming.
+Annoyed by people whining about performance degradation, blaming issues from compiler, software library in terms of bandwidth,CPU,network latency etc.
+while simply overlooking programming mistakes from their source code
 
-POST CONTAINS STUBORN, DOGMATIC and POMPOUS VIEWS, NOT INTENDED FOR CHILDREN!
+POST CONTAINS STUBORN, DOGMATIC and POMPOUS VIEWS, don't care about your sentiment to issue!
+
+![Try Again](/public/locals/slap001.jpg "Try Coding Again!")
+
 
  
 ### Basic C style IO and Low Level IO-library
@@ -23,7 +26,7 @@ C-library  includes wrapper functions fprintf,printf,vsprintf which do formattin
 
 Performance Tip:
 
-* While Writing to File say serializing object or index of document, write in binary rather that characters.
+* While Writing to File say serializing object or index of document, write in binary rather that ASCII characters.
 * While reading file read file contents in  object memory.
 
 Use macros if you need to debug  file contents
@@ -44,21 +47,44 @@ C++ IO functions as part of "Standard" Library. That is clear indication this as
 function. This standard functions are for "AAM" people. People who care about issues implemented in this 
 library should be carefully managed in their own implementations.
 
+What is locale in IOStreams?
+When we are dealing with money americans tend to use doller, english use pound and so on. In our case we have platform specific
+traits,timezone traits etc. to denote in some format. local facets are objects that describe such characteristics in file representation.
+Standard Stream objects	are larger in size due to formatting options,locale objects and book keeping variables.
 
-[Head to the readme](https://github.com/poole/lanyon#readme) to learn more.
+####Stupid Assumptions
+
+>Buffering inputs from stream is efficient
+
+If data is in stream buffer then it is already in main memory, there is no point in creating new memory buffer and copy 
+data from stream buffer to new buffer it is just very stupid!
+
+>Order in which data is written in buffer is same as it appears, 
+
+No way, as buffers are usually flushed on request or buffer full.
+also sequence depends upon clients holding stream. Standard streams provide "hooks" for ordering this sequence. For example if one is working
+with interactive console based application then every console write message should appear on screen before it accepts any inputs, and standard library gives that hook.
+
+>Console streams are same as Standard stream. 
+
+On Most of systems Virtual Consoles/shells redirect/dup(2) streams to standard stream.
+Outputting to screen is not standard stream all the time nor do all standard streams go to console.
 
 ### FAST IO as Per Domain
-Relational DBMS
+#####Driver
 
-Driver
+#####Relational DBMS
+RDBMS sees files are sequence of fixed or/and variable length records and indices. Algorithms operating on this records use iterator model
+to fetch records. Reads dont create issues but writes do. say in record updates or joins. To create efficient model, iterators are placed on
+primary buffer itself.
 
-Web Indexing
+Database softwares usually create their own buffer manager to acheive performance. Buffer manager creates buffer pool which came with prefetch and replacement policy so their is abstraction over file IO.
+#####Web Indexing
 
-COmputer Vision
+#####Computer Vision
 
 ### FAST IO for Competative Programmers
 
-Lanyon is developed on and hosted with GitHub. Head to the <a href="https://github.com/poole/lanyon">GitHub repository</a> for downloads, bug reports, and features requests.
 
 ### TAKE AWAY
 
@@ -72,3 +98,24 @@ Lanyon is developed on and hosted with GitHub. Head to the <a href="https://gith
 
 * Design your OWN library for your TASK!
 
+* Consider statically linked archives
+
+
+### References
+1.Technical Report on C++ Performance
+
+2.Optimizing Software in C++
+
+3.C++ Specification
+
+4.Common sense :P better if yours!
+
+> Email-style angle brackets
+> are used for blockquotes.
+
+> > And, they can be nested.
+
+> #### Headers in blockquotes
+> 
+> * You can quote a list.
+> * Etc.
