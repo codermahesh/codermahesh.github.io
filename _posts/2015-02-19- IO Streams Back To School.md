@@ -110,12 +110,3 @@ Database softwares usually create their own buffer manager to acheive performanc
 
 4.Common sense :P better if yours!
 
-> Email-style angle brackets
-> are used for blockquotes.
-
-> > And, they can be nested.
-
-> #### Headers in blockquotes
-> 
-> * You can quote a list.
-> * Etc.
