@@ -76,9 +76,10 @@ Outputting to screen is not standard stream all the time nor do all standard str
 #####Relational DBMS
 RDBMS sees files are sequence of fixed or/and variable length records and indices. Algorithms operating on this records use iterator model
 to fetch records. Reads dont create issues but writes do. say in record updates or joins. To create efficient model, iterators are placed on
-primary buffer itself.
+primary buffer itself. Following fact that primary buffer should be aware of record structure. 
 
 Database softwares usually create their own buffer manager to acheive performance. Buffer manager creates buffer pool which came with prefetch and replacement policy so their is abstraction over file IO.
+
 #####Web Indexing
 
 #####Computer Vision
