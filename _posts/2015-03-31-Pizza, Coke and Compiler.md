@@ -3,7 +3,7 @@ layout: post
 title: Pizza, Coke and Compiler
 ---
 @21:00 hr  still busy hexagon, rattled with issues, we questioned issues in  computer science, typically  compiler.
-Just light on  few sections. 
+Just light on  few sections. [unorganised content] 
 
 > What "people" know about compiler? <br/>
 >Compiler is software that converts source programming language to machine level/ assembly language.
@@ -11,40 +11,8 @@ Just light on  few sections.
 >What "people" mean to say "exactly" <br/>
 >Compiler is software that creates "semantically equivalent transformation" on source language to target language domain.
 
-### Compilers etc.
-1.Traditional Compiler -- Binary/ Object Code  creation
 
-* Static Compiler
-* Interpreter	
-* Just in Time Compiler	
-
-2.Source-2-Source
---Convertion between two programming languages. say Cpp => Java
-
-3.Configuration-2-Source 
---Generative Programming, accurately just subset of it. taking configuration about code to generate.
-Tablegen
-Google MockTests
-
-4.*Virtual Machines* 
---Tight couping between compiler backend phases. online compilation
-
-Trace based Compilers
-Interpreters
-Source-2-Source --
-Configuration-2-Source  --  some sort of Generative Programming
-
-Virtual Machines
-
-
-link time opts and runtime opts
-High level Virtual Machines
-Platform JVM .Net
-Native VMs
-Garbage Collections
-
-
-####\~ Specious Thoughts
+####\~ Specious Thoughts 
 #####Expression Tree
 
 *There is no such term "Expression Tree"!*
@@ -60,34 +28,28 @@ Intermediate representation for expressions can be written in stack machine form
 Intermediate representation for expressions are practically trees or directed acyclic graphs in  "Graphical" formats .
 so no "Expression Tree" !
 
-Optimizations
-Trees and DAGs
-Low heat Instructions
-C++, Java Compare
+*Optimization reduces code!*
 
-Compilers and Computer Security
-Compilers and Performance through Programming
+Almost right!, Optimizations tend to reduce code, lesser code, minimum processor power up time, less heat.
+although some optimizations increase code length say, auto vectorization which increases code size by adding code for runtime checks,
+guards etc. keeping in mind it increase performance several times compared to code length.
 
-Hot Topics
 
-Data locality Optimizations
-	Affine transform 
-	Pipeline 
-Multicore optmizations
+*Trees,Directed Acyclic Graphs...*
 
-What is not told
-	intrumentation
-	Cachegrind
-		
-DSLs
-1.Spreadsheet
-2.Image
-3.GraphViz
-4.Tablegen 
+Misconception at its best! Trees are graphs without cycle, so as Directed Acyclic graphs but in DAG node can have two parents, in tree they don't!
 
-Cool Stuff
-    Battle Code
-    Xtext
-    emscripten
-    webCL
-    
+*Low Heat Instructions* 
+
+Here is neat instruction from hardware designer 
+
+"During optimization choose instruction"s"  those emit less heat!"
+
+Optimizations on front line instructions in peepwhole expands code into low heat instructions.This is wasteful attempt, this expansion over huge code tend to keep silicon power on for longer time than usual. weird but true!, been there instrumented that!
+
+#### What book skipped?
+1.Code Instrumentation and Profiling is as strong issues as Compiler itself. Profile-evaluate-re-engineer would be the perfection.
+Hot path identification is used in runtime optimizations.
+
+2.Runtime engineering with compiler
+
