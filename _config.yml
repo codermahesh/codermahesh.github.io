@@ -1,7 +1,6 @@
 # Dependencies
 markdown:            redcarpet
-highlighter:         pygments
-
+highlighter:         rouge
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
@@ -19,8 +18,14 @@ paginate:            5
 # About/contact
 author:
   name:              ybar
-  url:               http://doesnotexit.com
+  url:               http://doesnotexist.com
   email:             doesnotexist@gmail.com
 
 # Custom vars
 version:             1.0.0
+
+
+# Paginate
+
+paginate: 3
+#paginate_path: "/page:num/"

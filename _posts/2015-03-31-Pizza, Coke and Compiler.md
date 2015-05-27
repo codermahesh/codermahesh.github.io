@@ -11,6 +11,17 @@ Just light on  few sections. [unorganised content]
 >What "people" mean to say "exactly" <br/>
 >Compiler is software that creates "semantically equivalent transformation" on source language to target language domain.
 
+Weird Fact but true!
+
+What Happens when we compile...
+
+![Traditional Compiler](/public/locals/TraditionalCompiler.svg "Try Coding Again!")
+
+What happens when web server serves...
+
+![Internet Model](/public/locals/InternetModel.svg "Try Coding Again!")
+
+viola! Everything that computer does has same FLOW! :D
 
 ####\~ Specious Thoughts 
 #####Expression Tree
