@@ -39,4 +39,12 @@ Monostate tend to have same features but different architecture.
 * Kernel locks and its abstractions are neat way to implement singleton constraints keeping in mind about "Compulsory" destructor execution
 whenever object is destroyed.
 * Registry should use data structures those are thread-safe.   
-     
+
+
+<style type="text/css">
+  .gist {width:100% !important;}
+  .gist-file
+  .gist-data {max-height: 100%;max-width: 100%;}
+</style>
+
+<script src="https://gist.github.com/codermahesh/a6a5d29bc572ea787e0b.js"></script>
