@@ -40,11 +40,12 @@ Monostate tend to have same features but different architecture.
 whenever object is destroyed.
 * Registry should use data structures those are thread-safe.   
 
+Implementations
 
-<style type="text/css">
-  .gist {width:100% !important;}
-  .gist-file
-  .gist-data {max-height: 100%;max-width: 100%;}
-</style>
+[Singleton_GOF_Implementation](https://github.com/codermahesh/design-lib/blob/master/C-Pattern/Singleton/Static-SingleClass.cpp)
 
-<script src="https://gist.github.com/codermahesh/a6a5d29bc572ea787e0b.js"></script>
+[Registry based Singleton](https://github.com/codermahesh/design-lib/blob/master/C-Pattern/Singleton/Static-DerivedSupport.cpp)
+
+[Monostate](#)
+
+[ThreadSafe Singleton](#)
