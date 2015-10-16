@@ -10,9 +10,12 @@ Past few weeks we have been busy designing DSL for Matrices. Intent is to create
 performance due to abstractions.
 
 		
-###CELL - My First Encounter with DSL 
+### CELL - My First Encounter with DSL 
 This was toy interpreter for spreadsheet designed to understand concepts from programming language class.
 This language supported arithmetic functions and macros just like Excel.
+Every cell identified with (x,y) is closure. Upon application of function on say row or column
+this closures update their envs.
+It also has functional rules.
 
 Cool Stuff
  Battle Code	
