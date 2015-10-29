@@ -13,7 +13,7 @@ tagline:             'Computational Matters'
 description:         'Computational Matters'
 url:                 http://codermahesh.github.io
 baseurl:             /
-paginate:            5
+paginate:            3
 
 # About/contact
 author:
