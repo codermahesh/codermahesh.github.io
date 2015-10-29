@@ -3,7 +3,7 @@ layout: post
 title: Pizza, Coke and Compiler
 ---
 @21:00 hr  still busy hexagon, rattled with issues, we questioned issues in  computer science, typically  compiler.
-Just light on  few sections. [unorganised content] 
+Just light on  few sections. [organised content] 
 
 > What "people" know about compiler? <br/>
 >Compiler is software that converts source programming language to machine level/ assembly language.
@@ -23,7 +23,7 @@ What happens when web server serves...
 
 viola! Everything that computer does has same FLOW! :D
 
-####\~ Specious Thoughts 
+####Specious Thoughts 
 #####Expression Tree
 
 *There is no such term "Expression Tree"!*
@@ -56,7 +56,7 @@ Here is neat instruction from hardware designer
 
 "During optimization choose instruction"s"  those emit less heat!"
 
-Optimizations on front line instructions in peepwhole expands code into low heat instructions.This is wasteful attempt, this expansion over huge code tend to keep silicon power on for longer time than usual. weird but true!, been there instrumented that!
+Optimizations on front line instructions in peep-hole expands code into low heat instructions.This is wasteful attempt, this expansion over huge code tend to keep silicon power on for longer time than usual. weird but true!, been there instrumented that!
 
 #### What book skipped?
 1.Code Instrumentation and Profiling is as strong issues as Compiler itself. Profile-evaluate-re-engineer would be the perfection.
