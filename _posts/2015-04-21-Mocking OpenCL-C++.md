@@ -47,7 +47,7 @@ works good. Implementor III came up with 64 bit coordinates and suddenly all fai
 > Solution
 >>  Best Feature in C++ and Design,Use of Abstraction
 
-* Ambiguity of Type Layout
+* Non-standard Types into Intermediate forms
 
 Cosider type halfn from spec. 
 ```
@@ -82,12 +82,15 @@ layer of Abstraction??
         ....
         }
 
+This comparisons are always tricky to support in compiler. Given that NaN can have more than one value, this operation
+needs thoughtful design, certainly not the one in older C specs.
 
-* Saga of && and \|\| on Values
+* Saga of Bitwise Operators
 
+	With this edition of specification, bitwise operators are applied on scalars and vectors without details of additional
+information, like integral type or not, whether internal representation has same effects as standard x86 ops or like last CL spec.ss
 
-* Copy &\| Assignment on Built-in types
-
+	
 
 * Casting Ops
 
@@ -108,7 +111,9 @@ model, so obious choice of casting would be overload of operator() to maintain i
 
 	and the story continues with isEqual function and == operator.
 
-
+* Redundancy of Operations
+	
+	
 ### 2. Macro defs
 
 Just like opencl-c, this spec contains macros which give sheer advantage of "token replacement". This processing is semantically impaired
